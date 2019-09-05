@@ -22,7 +22,8 @@ async def team_croot_rank(ctx, year, team):
             message = 'No results.  If the school is more than one word, use quotes around the entire school name.'
         else:
             rank = response[0]['rank']
-            message = f'Recruiting rank for {team} in {year}: {rank}'
+            points = response[0]['points']
+            message = f'Recruiting rank for {team} in {year}: {rank} ({points})'
 
         await ctx.send(message)
 
