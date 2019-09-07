@@ -66,9 +66,7 @@ def score_changed(game):
 
 # Checks to see if game has concluded.
 def end_of_game(game):
-  if(game['status']['type']['completed']):
-    return True
-  return False
+  return game['status']['type']['completed']
 
 # Creates the proper score update string to be posted in Discord.
 def create_score_update_string(game, drive):
@@ -85,6 +83,8 @@ def create_final_update_string(game):
   return result
 
 # Polls the API for the most recent data and checks for updates to the games.
+# In module for reference.
+# Function should be implemented in program that makes use of this module.
 def poll_for_updates(games):
   update_games(games)
   count = 0
