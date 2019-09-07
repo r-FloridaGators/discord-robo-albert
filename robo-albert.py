@@ -1,6 +1,7 @@
 import configparser
 
 import recruiting
+import stats
 
 from discord.ext import commands
 
@@ -11,6 +12,7 @@ TOKEN = config['default']['token']
 
 bot = commands.Bot(command_prefix='?')
 bot.add_cog(recruiting.Recruiting(bot))
+bot.add_cog(stats.Stats(bot))
 
 @bot.command()
 async def ping(ctx):
