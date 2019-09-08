@@ -3,8 +3,6 @@ import json
 from team_nickname import confirm_teamname
 from discord.ext import commands
 
-
-
 class Stats(commands.Cog):
 
     def __init__(self, bot):
@@ -29,9 +27,9 @@ class Stats(commands.Cog):
         nicknamelist=json.load(f)
         f.close
         #team=' '.join(args[1:])
-        team = confirm_teamname(nicknamelist,(args[1:]))
-        team = ' '.join(team)
-        
+        team = ' '.join(confirm_teamname(nicknamelist,(args[1:])))
+        #team = ' '.join(team)
+
         url = f'https://api.collegefootballdata.com/games?year={year}&seasonType=regular&team={team}'
 
         async with aiohttp.ClientSession() as session:
@@ -40,11 +38,23 @@ class Stats(commands.Cog):
             response = json.loads(response)
             if not response or len(response) is 0:
                 message = 'No results.'
+                await ctx.send(message)
                 return
             else:
                 message = f'**{team} in {year} (Regular season)**:\n'
                 for value in response:
-                    message += f'Week {value["week"]}: {value["away_team"]} @ {value["home_team"]} - {value["away_points"]} - {value["home_points"]}\n'
+                    away_team = value['away_team']
+                    home_team = value['home_team']
+                    is_home_team = team.lower() == home_team.lower()
+                    print_team = away_team if is_home_team else home_team
+                    home_points = value['home_points']
+                    away_points = value['away_points']
+                    is_home_win = int(home_points) > int(away_points)
+                    print_away_points = ('**' if not is_home_team else '') + str(value['away_points']) + ('**' if not is_home_team else '')
+                    print_home_points = ('**' if is_home_team else '') + str(value['home_points']) + ('**' if is_home_team else '')
+                    print_result = ('**WIN**' if ((is_home_team and is_home_win) or (not is_home_team and not is_home_win)) else 'LOSS') 
+
+                    message += f'Week {value["week"]}: {print_result} {"vs." if is_home_team else "@"} {print_team}: {print_away_points} - {print_home_points}\n'
 
             await ctx.send(message)
 
@@ -60,6 +70,17 @@ class Stats(commands.Cog):
             else:
                 message = f'**{team} in {year} (Post season)**:\n'
                 for value in response:
-                    message += f'Week {value["week"]}: {value["away_team"]} @ {value["home_team"]} - {value["away_points"]} - {value["home_points"]}\n'
+                    away_team = value['away_team']
+                    home_team = value['home_team']
+                    is_home_team = team.lower() == home_team.lower()
+                    print_team = away_team if is_home_team else home_team
+                    home_points = value['home_points']
+                    away_points = value['away_points']
+                    is_home_win = int(home_points) > int(away_points)
+                    print_away_points = ('**' if not is_home_team else '') + str(value['away_points']) + ('**' if not is_home_team else '')
+                    print_home_points = ('**' if is_home_team else '') + str(value['home_points']) + ('**' if is_home_team else '')
+                    print_result = ('**WIN**' if ((is_home_team and is_home_win) or (not is_home_team and not is_home_win)) else 'LOSS') 
+
+                    message += f'Week {value["week"]}: {print_result} {"vs." if is_home_team else "@"} {print_team}: {print_away_points} - {print_home_points}\n'
 
             await ctx.send(message)
