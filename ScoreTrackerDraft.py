@@ -45,7 +45,10 @@ def get_last_scoring_drive(id):
   payload = {"event": id}
   response = requests.get(SUMMARY_URL, payload)
   if(response.ok):
-    drives = json.loads(response.content)['drives']['previous']
+    try:
+      drives = json.loads(response.content)['drives']['previous']
+    except:
+      return None
     for drive in reversed(drives):
       if(drive['isScore']):
         return drive
@@ -70,16 +73,20 @@ def end_of_game(game):
 
 # Creates the proper score update string to be posted in Discord.
 def create_score_update_string(game, drive):
-  result = drive['plays'][-1]['text'] + '\n'
-  result += game['away_team'] + ': ' + game['away_score'] +'\n'
-  result += game['home_team'] + ': ' + game['home_score']
+  result = '-----------------\n'
+  if(drive != None):
+    result += drive['plays'][-1]['text'] + '\n'
+  result += game['away_team'] + ': ' + game['away_score'] + '\n'
+  result += game['home_team'] + ': ' + game['home_score'] + '\n'
+  result += '-----------------'
   return result
 
 #Creates the proper game final string to be posted in Discord.
 def create_final_update_string(game):
-  result = '*---FINAL---*\n'
-  result += game['away_team'] + ': ' + game['away_score'] +'\n'
-  result += game['home_team'] + ': ' + game['home_score']
+  result = '***------FINAL------***\n'
+  result += game['away_team'] + ': ' + game['away_score'] + '\n'
+  result += game['home_team'] + ': ' + game['home_score'] + '\n'
+  result += '***-----------------***'
   return result
 
 # Polls the API for the most recent data and checks for updates to the games.
