@@ -2,11 +2,11 @@
 # r/FloridaGators discord bot
 
 # Prerequisites:
-python 3.7
+python 3.6+
 
 # To run:
 ```
-python3.7 -m venv ./venv
+python3.6 -m venv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
 python robo_albert.py
