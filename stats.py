@@ -1,6 +1,6 @@
 import aiohttp
 import json
-
+from team_nickname import confirm_teamname
 from discord.ext import commands
 
 class Stats(commands.Cog):
@@ -22,8 +22,7 @@ class Stats(commands.Cog):
         except ValueError:
             await ctx.send(message)
             return
-
-        team = ' '.join(args[1:])
+        team = confirm_teamname((' '.join(args[1:])))
 
         url = f'https://api.collegefootballdata.com/games?year={year}&seasonType=regular&team={team}'
 
