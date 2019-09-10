@@ -22,13 +22,7 @@ class Stats(commands.Cog):
         except ValueError:
             await ctx.send(message)
             return
-
-        f= open('teamnicknames.json')
-        nicknamelist=json.load(f)
-        f.close
-        #team=' '.join(args[1:])
-        team = ' '.join(confirm_teamname(nicknamelist,(args[1:])))
-        #team = ' '.join(team)
+        team = confirm_teamname((' '.join(args[1:])))
 
         url = f'https://api.collegefootballdata.com/games?year={year}&seasonType=regular&team={team}'
 

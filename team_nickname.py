@@ -1,11 +1,10 @@
 
 import json
 
-#f= open('teamnicknames.json')
-#nicknamelist=json.load(f)
-#f.close
+f= open('teamnicknames.json', encoding='latin-1')
+json_nicknames=json.load(f)
 
-def confirm_teamname(json_nicknames,nickname):
+def confirm_teamname(nickname):
     name="notfound"
     for (k,v) in json_nicknames.items():
         currentteam=str(k)
@@ -21,5 +20,3 @@ def confirm_teamname(json_nicknames,nickname):
                 #print("key: " + k)
     return(name)
 
-#theteam=find_teamname(nicknamelist,"floriddda")
-#print(theteam)
