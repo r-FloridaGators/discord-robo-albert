@@ -48,10 +48,16 @@ class Stats(commands.Cog):
                     print_home_points = ''
                     print_result = ''
                     try:
+                        is_tie = int(home_points) == int(away_points)
                         is_home_win = int(home_points) > int(away_points)
                         print_away_points = ('**' if not is_home_team else '') + str(value['away_points']) + ('**' if not is_home_team else '')
                         print_home_points = ('**' if is_home_team else '') + str(value['home_points']) + ('**' if is_home_team else '')
-                        print_result = ('**WIN**' if ((is_home_team and is_home_win) or (not is_home_team and not is_home_win)) else 'LOSS') 
+                        if is_tie:
+                            print_result = '**TIE**'
+                        elif((is_home_team and is_home_win) or(not is_home_team and not is_home_win)):
+                            print_result = '**WIN**'
+                        elif((is_home_team and not is_home_win) or (not is_home_team and is_home_win)):
+                            print_result = 'LOSS'
                     except:
                        pass 
 
@@ -66,10 +72,11 @@ class Stats(commands.Cog):
             response = await raw_response.text()
             response = json.loads(response)
             if not response or len(response) is 0:
-                message = ''
+                message = 'No results.'
+                await ctx.send(message)
                 return
             else:
-                message = f'**{team} in {year} (Post season)**:\n'
+                message = f'**{team} in {year} (Regular season)**:\n'
                 for value in response:
                     away_team = value['away_team']
                     home_team = value['home_team']
@@ -77,10 +84,23 @@ class Stats(commands.Cog):
                     print_team = away_team if is_home_team else home_team
                     home_points = value['home_points']
                     away_points = value['away_points']
-                    is_home_win = int(home_points) > int(away_points)
-                    print_away_points = ('**' if not is_home_team else '') + str(value['away_points']) + ('**' if not is_home_team else '')
-                    print_home_points = ('**' if is_home_team else '') + str(value['home_points']) + ('**' if is_home_team else '')
-                    print_result = ('**WIN**' if ((is_home_team and is_home_win) or (not is_home_team and not is_home_win)) else 'LOSS') 
+
+                    print_away_points = ''
+                    print_home_points = ''
+                    print_result = ''
+                    try:
+                        is_tie = int(home_points) == int(away_points)
+                        is_home_win = int(home_points) > int(away_points)
+                        print_away_points = ('**' if not is_home_team else '') + str(value['away_points']) + ('**' if not is_home_team else '')
+                        print_home_points = ('**' if is_home_team else '') + str(value['home_points']) + ('**' if is_home_team else '')
+                        if is_tie:
+                            print_result = '**TIE**'
+                        elif((is_home_team and is_home_win) or(not is_home_team and not is_home_win)):
+                            print_result = '**WIN**'
+                        elif((is_home_team and not is_home_win) or (not is_home_team and is_home_win)):
+                            print_result = 'LOSS'
+                    except:
+                       pass 
 
                     message += f'Week {value["week"]}: {print_result} {"vs." if is_home_team else "@"} {print_team}: {print_away_points} - {print_home_points}\n'
 
