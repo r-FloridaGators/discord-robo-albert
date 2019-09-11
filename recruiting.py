@@ -10,7 +10,7 @@ class Recruiting(commands.Cog):
 
     @commands.command()
     async def croot(self, ctx, *args):
-        message = 'Invalid syntax. ?croot <year> <name>'
+        message = 'Invalid syntax -- ?croot <year> <name>'
         if len(args) <= 1:
             await ctx.send(message)
             return
@@ -33,7 +33,11 @@ class Recruiting(commands.Cog):
             response = await raw_response.text()
             response = json.loads(response)
             if not response or len(response) is 0:
-                message = 'No results.'
+                message = 'Sorry, no results found.'
+                await ctx.send(message)
+                return
+            elif len(response) > 2:
+                message = 'Too many results.  Please be more specific.'
                 await ctx.send(message)
                 return
             else:
@@ -53,7 +57,7 @@ class Recruiting(commands.Cog):
 
     @commands.command()
     async def team_croot_rank(self, ctx, *args):
-        message = 'Invalid syntax.  ?team_croot_rank <year> <team>'
+        message = 'Invalid syntax -- ?team_croot_rank <year> <team>'
         if len(args) <= 1:
             await ctx.send(message)
             return

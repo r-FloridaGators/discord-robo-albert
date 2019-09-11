@@ -1,57 +1,57 @@
 {
-  "chattanooga": [
+  "Chattanooga": [
     "chatt"
   ],
-  "connecticut": [
+  "Connecticut": [
     "uconn",
     "conn"
   ],
-  "louisiana monroe": [
+  "Louisiana Monroe": [
     "ulm"
   ],
-  "south alabama": [
+  "South Alabama": [
     "usa"
   ],
-  "air force": [
+  "Air Force": [
     "airforce",
     "usafa",
     "usaf",
     "af"
   ],
-  "akron": [
+  "Akron": [
     "akr"
   ],
-  "alabama": [
+  "Alabama": [
     "ala",
     "bama",
     "gump",
     "tide"
   ],
-  "appalachian state": [
+  "Appalachian State": [
     "app st",
     "app state"
   ],
-  "arizona": [
+  "Arizona": [
     "zona"
   ],
-  "arizona state": [
+  "Arizona State": [
     "asu",
     "azst",
     "sparky"
   ],
-  "arkansas": [
+  "Arkansas": [
     "ark",
     "arky",
     "bert",
     "razorbacks",
     "ar"
   ],
-  "arkansas state": [
+  "Arkansas State": [
     "arst",
     "arkst",
     "ark state"
   ],
-  "auburn": [
+  "Auburn": [
     "aub",
     "au",
     "aubrun",
@@ -59,7 +59,7 @@
     "awburn",
     "barners"
   ],
-  "baylor": [
+  "Baylor": [
     "bay",
     "baylol",
     "baylour"
@@ -71,72 +71,72 @@
     "big10",
     "b1g"
   ],
-  "boise state": [
+  "Boise State": [
     "bsu",
     "boise st",
     "boisest",
     "boise"
   ],
-  "boston college": [
+  "Boston College": [
     "bc"
   ],
-  "bowling green": [
+  "Bowling Green": [
     "bg",
     "bgsu"
   ],
-  "byu": [
+  "BYU": [
     "mormons",
     "lds"
   ],
-  "california": [
+  "California": [
     "cal"
   ],
-  "central michigan": [
+  "Central Michigan": [
     "central mich",
     "cmu"
   ],
-  "cincinatti": [
+  "Cincinatti": [
     "cincy",
     "cinci",
     "cinc"
   ],
-  "clemson": [
+  "Clemson": [
     "fuck",
     "clem"
   ],
-  "colorado": [
+  "Colorado": [
     "col",
     "cu",
     "co",
     "buffs",
     "buffaloes"
   ],
-  "colorado state": [
+  "Colorado State": [
     "csu"
   ],
-  "duke": [
+  "Duke": [
     "dook"
   ],
-  "east carolina": [
+  "East Carolina": [
     "ecu"
   ],
-  "eastern michigan": [
+  "Eastern Michigan": [
     "emu"
   ],
-  "florida": [
+  "Florida": [
     "fla",
     "gators",
     "jorts",
     "uf"
   ],
-  "florida atlantic": [
+  "Florida Atlantic": [
     "fau"
   ],
-  "florida intl": [
+  "Florida Intl": [
     "florida international",
     "fiu"
   ],
-  "florida state": [
+  "Florida State": [
     "flst",
     "noles",
     "crablegs",
@@ -145,11 +145,11 @@
     "fl st",
     "fsu"
   ],
-  "fresno state": [
+  "Fresno State": [
     "fresno",
     "fresno st"
   ],
-  "georgia": [
+  "Georgia": [
     "dwags",
     "uga",
     "dawgs",
@@ -158,17 +158,17 @@
     "ugh",
     "u(sic)ga"
   ],
-  "georgia southern": [
+  "Georgia Southern": [
     "gaso",
     "gasouthern",
     "gsu"
   ],
-  "georgia state": [
+  "Georgia State": [
     "state",
     "gastate",
     "gast"
   ],
-  "georgia tech": [
+  "Georgia Tech": [
     "nerds",
     "buzz",
     "bees",
@@ -176,30 +176,30 @@
     "gtech",
     "gatech"
   ],
-  "houston": [
+  "Houston": [
     "hou",
     "uh",
     "coogs"
   ],
-  "illinois": [
+  "Illinois": [
     "uiuc",
     "ill"
   ],
-  "iowa": [
+  "Iowa": [
     "hawkeyes"
   ],
-  "iowa state": [
+  "Iowa State": [
     "isu",
     "iowa st"
   ],
-  "jacksonville": [
+  "Jacksonville": [
     "jville"
   ],
-  "kansas": [
+  "Kansas": [
     "ku",
     "jayhawks"
   ],
-  "kansas state": [
+  "Kansas State": [
     "k-state",
     "kstate",
     "kst",
@@ -208,16 +208,16 @@
     "k state",
     "wizard"
   ],
-  "kentucky": [
+  "Kentucky": [
     "uk"
   ],
-  "louisiana lafayette": [
+  "Louisiana Lafayette": [
     "ull"
   ],
-  "louisiana tech": [
+  "Louisiana Tech": [
     "latech"
   ],
-  "louisville": [
+  "Louisville": [
     "lou",
     "ul",
     "lville",
@@ -226,25 +226,25 @@
     "papa johns",
     "go big papa"
   ],
-  "lsu": [
+  "LSU": [
     "corndogs",
     "louisiana state",
     "louisiana state university"
   ],
-  "maryland": [
+  "Maryland": [
     "umd",
     "md",
     "terps",
     "turtles"
   ],
-  "massachusetts": [
+  "Massachusetts": [
     "umass",
     "massachussets"
   ],
-  "memphis": [
+  "Memphis": [
     "mem"
   ],
-  "miami": [
+  "Miami": [
     "canes",
     "miami florida",
     "miami fl",
@@ -254,13 +254,13 @@
     "miami",
     "da u"
   ],
-  "miami (oh)": [
+  "Miami (OH)": [
     "mu",
     "miamioh",
     "miami oh",
     "miami ohio"
   ],
-  "michigan": [
+  "Michigan": [
     "mich",
     "mich",
     "umich",
@@ -268,24 +268,24 @@
     "harbaugh",
     "um"
   ],
-  "michigan state": [
+  "Michigan State": [
     "sparty",
     "msu",
     "michst",
     "michigan st"
   ],
-  "middle tennessee": [
+  "Middle Tennessee": [
     "mtsu",
     "middle tennessee state"
   ],
-  "minnesota": [
+  "Minnesota": [
     "minn",
     "minny",
     "gophers",
     "dillybars",
     "dilly bar"
   ],
-  "mississippi state": [
+  "Mississippi State": [
     "miss state",
     "land mass state",
     "ms st",
@@ -296,115 +296,115 @@
     "land mass st",
     "miss st"
   ],
-  "missouri": [
+  "Missouri": [
     "mizzou",
     "miz",
     "misery",
     "mizz"
   ],
-  "nc state": [
+  "NC State": [
     "ncst",
     "ncsu",
     "wolfpack"
   ],
-  "nebraska": [
+  "Nebraska": [
     "neb",
     "huskers",
     "unl",
     "corn"
   ],
-  "new mexico": [
+  "New Mexico": [
     "unm",
     "bob davie"
   ],
-  "north carolina": [
+  "North Carolina": [
     "nc",
     "unc"
   ],
-  "north dakota state": [
+  "North Dakota State": [
     "ndsu"
   ],
-  "northern illinois": [
+  "Northern Illinois": [
     "niu"
   ],
-  "northwestern": [
+  "Northwestern": [
     "nu",
     "nw"
   ],
-  "notre dame": [
+  "Notre Dame": [
     "nd",
     "noter dame",
     "irish",
     "domers"
   ],
-  "ohio state": [
+  "Ohio State": [
     "aosu",
     "osu",
     "tosu"
   ],
-  "oklahoma": [
+  "Oklahoma": [
     "ou",
     "ok"
   ],
-  "oklahoma state": [
+  "Oklahoma State": [
     "okst"
   ],
-  "old dominion": [
+  "Old Dominion": [
     "odu"
   ],
-  "ole miss": [
+  "Ole Miss": [
     "rebels",
     "land mass",
     "ole mass",
     "ole"
   ],
-  "oregon": [
+  "Oregon": [
     "ducks",
     "ore",
     "uo",
     "quack"
   ],
-  "oregon state": [
+  "Oregon State": [
     "orst"
   ],
-  "osu": [
+  "OSU": [
     "buckeyes"
   ],
-  "penn state": [
+  "Penn State": [
     "psu",
     "penn st",
     "ttsci"
   ],
-  "pittsburgh": [
+  "Pittsburgh": [
     "pitt"
   ],
-  "purdue": [
+  "Purdue": [
     "purdont",
     "boilermakers"
   ],
-  "rutgers": [
+  "Rutgers": [
     "rut",
     "ru",
     "buttgers"
   ],
-  "sam houston state": [
+  "Sam Houston State": [
     "shsu"
   ],
-  "san diego state": [
+  "San Diego State": [
     "sdsu",
     "san diego st"
   ],
-  "san josé state": [
+  "San José State": [
     "san jose",
     "sjsu",
     "san jose state",
     "san jose st"
   ],
-  "smu": [
+  "SMU": [
     "southern methodist",
     "smoo"
   ],
-  "south carolina": [
+  "South Carolina": [
     "cocks",
     "sakerlina",
     "gamecocks",
@@ -413,43 +413,43 @@
     "usce",
     "scar"
   ],
-  "south florida": [
+  "South Florida": [
     "usf",
     "bulls"
   ],
-  "southern utah": [
+  "Southern Utah": [
     "suu"
   ],
-  "stanford": [
+  "Stanford": [
     "stanny",
     "trees",
     "stan",
     "furd"
   ],
-  "syracuse": [
+  "Syracuse": [
     "syr",
     "cuse"
   ],
-  "tcu": [
+  "Tcu": [
     "frogs"
   ],
-  "tennessee": [
+  "Tennessee": [
     "checkers",
     "smokey",
     "tenn",
     "vols",
     "ten"
   ],
-  "tennessee tech": [
+  "Tennessee Tech": [
     "tenn tech",
     "tntech",
     "tn tech"
   ],
-  "tennessee-martin": [
+  "Tennessee-Martin": [
     "tenn martin",
     "utm"
   ],
-  "texas": [
+  "Texas": [
     "texsa",
     "taxes",
     "tejas",
@@ -459,7 +459,7 @@
     "ut",
     "zerosa"
   ],
-  "texas a&m": [
+  "Texas A&M": [
     "aggies",
     "atm",
     "a&m",
@@ -468,77 +468,77 @@
     "inthebag",
     "tamu"
   ],
-  "texas san antonio": [
+  "Texas San Antonio": [
     "utsa"
   ],
-  "texas tech": [
+  "Texas Tech": [
     "tt",
     "ttu",
     "ttech",
     "tortillas",
     "sunglasses"
   ],
-  "the citadel": [
+  "The Citadel": [
     "citadel"
   ],
-  "usc": [
+  "USC": [
     "uscw",
     "southern cal"
   ],
-  "utah": [
+  "Utah": [
     "utes"
   ],
-  "utah state": [
+  "Utah State": [
     "usu",
     "utah st"
   ],
-  "utica college": [
+  "Utica College": [
     "utica"
   ],
-  "vanderbilt": [
+  "Vanderbilt": [
     "vandy"
   ],
-  "virginia": [
+  "Virginia": [
     "uva",
     "va"
   ],
-  "virginia tech": [
+  "Virginia Tech": [
     "vatech",
     "vt",
     "vtech"
   ],
-  "wake forest": [
+  "Wake Forest": [
     "wf",
     "wake",
     "wakef"
   ],
-  "washington": [
+  "Washington": [
     "uw",
     "wash"
   ],
-  "washington state": [
+  "Washington State": [
     "wazzu",
     "wazzy",
     "cougs",
     "cuogs",
     "wsu"
   ],
-  "west virginia": [
+  "West Virginia": [
     "wvu",
     "wv",
     "couches"
   ],
-  "western kentucky": [
+  "Western Kentucky": [
     "wku",
     "hilltoppers"
   ],
-  "western michigan": [
+  "Western Michigan": [
     "wmu",
     "row the boat",
     "rowtheboat",
     "pj fleck"
   ],
-  "wisconsin": [
+  "Wisconsin": [
     "wiscy",
     "wis",
     "wisc"
