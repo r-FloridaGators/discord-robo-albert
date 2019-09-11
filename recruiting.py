@@ -2,6 +2,7 @@ import aiohttp
 import json
 
 from discord.ext import commands
+from team_nickname import confirm_teamname
 
 class Recruiting(commands.Cog):
 
@@ -70,7 +71,7 @@ class Recruiting(commands.Cog):
             await ctx.send(message)
             return
 
-        team = ' '.join(args[1:])
+        team = confirm_teamname((' '.join(args[1:])))
 
         url = f'https://api.collegefootballdata.com/recruiting/teams?year={year}&team={team}'
         async with aiohttp.ClientSession() as session:
@@ -82,6 +83,6 @@ class Recruiting(commands.Cog):
             else:
                 rank = response[0]['rank']
                 points = response[0]['points']
-                message = f'247 Recruiting rank for {team} in {year}: {rank} ({points})'
+                message = f'247 Recruiting rank for **{team}** in {year}: **{rank}** ({points})'
 
             await ctx.send(message)
