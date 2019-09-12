@@ -1,5 +1,6 @@
 import configparser
 
+import betting
 import recruiting
 import stats
 
@@ -13,6 +14,7 @@ TOKEN = config['default']['token']
 bot = commands.Bot(command_prefix='?')
 bot.add_cog(recruiting.Recruiting(bot))
 bot.add_cog(stats.Stats(bot))
+bot.add_cog(betting.Betting(bot))
 
 @bot.command()
 async def ping(ctx):
