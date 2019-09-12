@@ -10,7 +10,7 @@ class Stats(commands.Cog):
 
     @commands.command()
     async def games(self, ctx, *args):
-        message = 'Invalid syntax. ?games <year> <school>'
+        message = 'Invalid syntax -- ?games <year> <school>'
         if len(args) <= 1:
             await ctx.send(message)
             return
