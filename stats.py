@@ -72,11 +72,9 @@ class Stats(commands.Cog):
             response = await raw_response.text()
             response = json.loads(response)
             if not response or len(response) is 0:
-                message = 'No results.'
-                await ctx.send(message)
                 return
             else:
-                message = f'**{team} in {year} (Regular season)**:\n'
+                message = f'**{team} in {year} (Post season)**:\n'
                 for value in response:
                     away_team = value['away_team']
                     home_team = value['home_team']
