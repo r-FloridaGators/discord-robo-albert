@@ -45,13 +45,14 @@ class Recruiting(commands.Cog):
                 for value in response:
                     player = value['Player']
                     full_name = player['FullName']
+                    position = player['PrimaryPlayerPosition']['Abbreviation']
                     evaluation = player['ScoutEvaluation']
                     url = player['Url']
                     composite_rating = player['CompositeRating']
                     stars = player['CompositeStarRating']
                     stars_str = f'⭐'*int(stars)
 
-                    message = f'\n**{full_name}\n247 Composite:** {stars_str} ({composite_rating})\n{url}\n{evaluation or ""}\n'
+                    message = f'\n**{full_name} - {position}\n247 Composite:** {stars_str} ({composite_rating})\n{url}\n{evaluation or ""}\n'
 
                     await ctx.send(message)
 
