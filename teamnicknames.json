@@ -98,7 +98,8 @@
   "Cincinatti": [
     "cincy",
     "cinci",
-    "cinc"
+    "cinc",
+    "cincinnati"
   ],
   "Clemson": [
     "fuck",
@@ -184,6 +185,10 @@
   "Illinois": [
     "uiuc",
     "ill"
+  ],
+  "Indiana": [
+    "Hoosiers",
+    "Indy"
   ],
   "Iowa": [
     "hawkeyes"
@@ -394,7 +399,7 @@
     "sdsu",
     "san diego st"
   ],
-  "San José State": [
+  "San JosÃ© State": [
     "san jose",
     "sjsu",
     "san jose state",
@@ -480,6 +485,9 @@
   ],
   "The Citadel": [
     "citadel"
+  ],
+  "UCLA": [
+    "Bruins"
   ],
   "USC": [
     "uscw",
