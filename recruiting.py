@@ -1,4 +1,5 @@
 import aiohttp
+import configparser
 import json
 
 from discord.ext import commands
@@ -8,6 +9,10 @@ class Recruiting(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+        config = configparser.ConfigParser()
+        config.read('config.ini')
+
+        self.API_KEY = config['default']['cfbdata_api_key']
 
     @commands.command()
     async def croot(self, ctx, *args):
@@ -76,7 +81,8 @@ class Recruiting(commands.Cog):
 
         url = f'https://api.collegefootballdata.com/recruiting/teams?year={year}&team={team}'
         async with aiohttp.ClientSession() as session:
-            raw_response = await session.get(url)
+            headers = {"Authorization": f'Bearer {self.API_KEY}'}
+            raw_response = await session.get(url, headers = headers)
             response = await raw_response.text()
             response = json.loads(response)
             if not response:
