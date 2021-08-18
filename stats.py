@@ -1,4 +1,5 @@
 import aiohttp
+import configparser
 import json
 from team_nickname import confirm_teamname
 from discord.ext import commands
@@ -7,6 +8,10 @@ class Stats(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+        config = configparser.ConfigParser()
+        config.read('config.ini')
+
+        self.API_KEY = config['default']['cfbdata_api_key']
 
     @commands.command()
     async def games(self, ctx, *args):
@@ -27,7 +32,8 @@ class Stats(commands.Cog):
         url = f'https://api.collegefootballdata.com/games?year={year}&seasonType=regular&team={team}'
 
         async with aiohttp.ClientSession() as session:
-            raw_response = await session.get(url)
+            headers = {"Authorization": f'Bearer {self.API_KEY}'}
+            raw_response = await session.get(url, headers = headers)
             response = await raw_response.text()
             response = json.loads(response)
             if not response or len(response) is 0:
@@ -68,7 +74,8 @@ class Stats(commands.Cog):
         url = f'https://api.collegefootballdata.com/games?year={year}&seasonType=postseason&team={team}'
 
         async with aiohttp.ClientSession() as session:
-            raw_response = await session.get(url)
+            headers = {"Authorization": f'Bearer {self.API_KEY}'}
+            raw_response = await session.get(url, headers = headers)
             response = await raw_response.text()
             response = json.loads(response)
             if not response or len(response) is 0:
