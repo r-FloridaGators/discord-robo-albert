@@ -42,6 +42,7 @@ class ScoreInquiry(commands.Cog):
             response = requests.get(SUMMARY_URL, payload)
             if response.ok:
                 game = json.loads(response.content)
+                print(game)
                 return self.create_score_string(game)
             else:
                 response.raise_for_status()
@@ -56,7 +57,10 @@ class ScoreInquiry(commands.Cog):
         home = competition['competitors'][0]
         away = competition['competitors'][1]
 
-        home_win_probability = round(float(game['winprobability'][-1]['homeWinPercentage']), 3) * 100
+        try:
+          home_win_probability = round(float(game['winprobability'][-1]['homeWinPercentage']), 3) * 100
+        except:
+          print('Game not started, no probability info yet.')
 
         if 'score' in home:
           result = '-----------------\n'
