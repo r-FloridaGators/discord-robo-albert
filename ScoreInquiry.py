@@ -42,7 +42,6 @@ class ScoreInquiry(commands.Cog):
             response = requests.get(SUMMARY_URL, payload)
             if response.ok:
                 game = json.loads(response.content)
-                print(game)
                 return self.create_score_string(game)
             else:
                 response.raise_for_status()
